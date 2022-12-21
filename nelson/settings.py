@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-kn^3l1-0)h#aba@4c2drf)i7da)3$=py(yl6^-i52*!9!0&s4c'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DB_NAME = os.environ.get('DB_NAME')
 DB_USER = os.environ.get('DB_USER')
@@ -32,7 +32,7 @@ DB_PORT = os.environ.get('DB_PORT') or '5432'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nelson.herokuapp.com', ]
 
 
 # Application definition
