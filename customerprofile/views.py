@@ -18,7 +18,7 @@ from base.models import AccountBanner, LoginBanner
 class CustomerRegistrationView(CreateView):
     template_name = 'registration.html'
     form_class = CustomerRegistrationForm
-    success_url = reverse_lazy('profile')
+    success_url = reverse_lazy('/profile')
 
     def form_valid(self, form):
         username = form.cleaned_data.get('username')
