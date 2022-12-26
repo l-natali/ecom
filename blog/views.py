@@ -25,7 +25,7 @@ def blog(request):
         cart = None
 
     # Set up Pagination
-    p = Paginator(Blog.objects.all(), 15)
+    p = Paginator(Blog.objects.all(), 6)
     page = request.GET.get('page')
     blog_posts = p.get_page(page)
     nums = 'a' * blog_posts.paginator.num_pages

@@ -76,7 +76,7 @@ class ShopView(View):
             cart = None
 
         # Set up Pagination
-        p = Paginator(Product.objects.filter(is_visible=True), 15)
+        p = Paginator(Product.objects.filter(is_visible=True), 6)
         page = request.GET.get('page')
         product_list = p.get_page(page)
         nums = 'a' * product_list.paginator.num_pages
