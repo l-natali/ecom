@@ -17,7 +17,7 @@ class BaseView(NelsonMixin, View):
     def get(self, request):
         categories = Category.objects.filter(is_visible=True)
         products = Product.objects.filter(is_visible=True)
-        new_arrivals = Product.objects.filter(new_arrival=True)
+        new_arrivals = Product.objects.filter(new_arrival=True)[:4]
         advantages = Advantages.objects.all()
         discount_banner = DiscountBanner.objects.all()
         furniture = Furniture.objects.all()
